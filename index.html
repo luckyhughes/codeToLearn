@@ -1,300 +1,434 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<style>
-		#map {
-			height: 300px;
-			width: 50%;
-			margin-left: auto;
-			margin-right: auto;
-		}
-		.black{
-			color: #fff;
-			font-size: 20px;
-		}
-	</style>
-<meta charset="UTF-8">
-<title>Homepage</title>
-<meta property="keywords" content="">
-<meta property="og:title" content=""/>
-<meta property="og:description" content=""/>
-<meta property="og:type" content="website"/>
-<meta property="og:image" content="resources/img/logo1200x630img.png">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css" />
-<link rel="icon" href="">
+    <style>
+        #map {
+            height: 250px;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .black {
+            color: #fff;
+            font-size: 20px;
+        }
+
+        .mywhite {
+            color: #FFFFFF;
+            font-size: 20px;
+            align: center;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>codeToLearn</title>
+    <meta property="keywords" content="">
+    <meta property="og:title" content=""/>
+    <meta property="og:description" content=""/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="resources/img/logo1200x630img.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="icon" href="">
+    <script type="text/javascript" src="https://secure.leadforensics.com/js/72862.js"></script>
+    <noscript><img src="https://secure.leadforensics.com/72862.png" style="display:none;"/></noscript>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="resources/css/style_general.css">
+    <link rel="stylesheet" href="resources/css/style_home.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="resources/js/jquery-3.0.0.min.js"></script>
+    <script src="resources/js/script_anchor.js"></script>
+    <script src="resources/js/slick.js"></script>
+    <script src="resources/js/script_hoverEffect.js"></script>
+    <script src="resources/js/script_nav.js"></script>
+    <link rel="stylesheet" href="resources/css/bootstrap.min.css">
+    <script>
+        $universal = {
+            courses: [
+
+                {
+                    name: 'FREE CODING BOOTCAMP',
+                    description: 'Demo Description',
+                    pic: 'resources/img/home-solutions-04.svg',
+                    class1: 'icon-container icon4',
+                    link: 'bootCampCourseDetail'
+                },
+                {
+                    name: 'AUTOMATION QA TRACK',
+                    description: 'Demo Description',
+                    pic: 'resources/img/home-solutions-02.svg',
+                    class1: 'icon-container icon2',
+                    link: 'QACourseDetail'
+                },
+                {
+                    name: 'SOFTWARE DEVELOPER',
+                    description: 'Demo Description',
+                    pic: 'resources/img/home-solutions-03.svg',
+                    class1: 'icon-container icon3',
+                    link: 'devCourseDetail'
+                },
+                {
+                    name: 'CLOUD AND DEVOPS',
+                    description: 'Demo Description',
+                    pic: 'resources/img/home-solutions-01.svg',
+                    class1: 'icon-container icon1',
+                    link: 'cloudCourseDetail'
+                },
+                {
+                    name: 'DATA STRUCTURES',
+                    description: 'Demo Description',
+                    pic: 'resources/img/home-solutions-05.svg',
+                    class1: 'icon-container icon5',
+                    link: 'datastructureCourseDetail'
+                },
+
+            ],
+            main_heading: "We are living in digital economy, new jobs need coding skills to build digital world",
+            sub_heading: "Be part of change and shape your career to become Software Engineer, we make sure everyone can learn to code if you are ready"
+        };
+    </script>
 
 </head>
 <body>
 <nav id="absNav">
-<div class="barra-nav">
-<div class="logo" id="logo">
-<a href="">Logo Here</a>
-</div>
-<div class="navBar">
-</div>
+    <div class="barra-nav">
+        <div class="logo" id="logo">
+            <a href="">Logo Here</a>
+        </div>
+    </div>
+    <div class="navBar">
+    </div>
 </nav>
 <div id="mobile-absNav">
-<div class="mobile-nav">
- 
-<div class="logo">
-<a href="">Logo Here</a>
-</div>
-</div>
+    <div class="mobile-nav">
+
+        <div class="logo">
+            <a href="">Logo Here</a>
+        </div>
+    </div>
 </div>
 <button id="btnNavBar"><img src="resources/img/menu.svg" alt="Three horizontal parallel lines"/></button>
 <div class="container-fluid">
-<header class="row parallaxBackground">
-<div class="headerTitle col-lg-9 col-md-9 col-sm-10 col-xs-12 centrado" id="mainHeading">
+    <header class="row parallaxBackground">
+        <div class="headerTitle col-lg-9 col-md-9 col-sm-10 col-xs-12 centrado" id="mainHeading">
 
-</div>
-<div class="headerSubTitle col-lg-9 col-md-9 col-sm-10 col-xs-12 centrado" id="subHeading">
-</div>
-<div class="headerBtns col-lg-5 col-md-6 col-sm-8 col-xs-10 centrado">
-<div class="btn-sq btn-right">
-<a onclick="goTo('courses',-40);">COURSES</a>
-</div>
-<div class="btn-sq btn-right">
-<a onclick="goTo('register',-80);">REGISTER</a>
-</div>
-</div>
-</header>
-<script src="resources/js/script_nav.js"></script>
-<link rel="stylesheet" href="resources/css/bootstrap.min.css">
-<section class="section3 row" id="courses">
-<article class="col-md-9 col-sm-10 col-xs-12 centrado">
-<h3 style="color: #000;">COURSES</h3>
-<p>All courses are job oriented to skill enhancement courses to help you get a new or better job!</p>
-<div class="sq-icons-container col-md-12" id="courseContainer">
+        </div>
+        <div class="headerSubTitle col-lg-9 col-md-9 col-sm-10 col-xs-12 centrado" id="subHeading">
+        </div>
+        <div class="headerBtns col-lg-5 col-md-6 col-sm-8 col-xs-10 centrado">
+            <div class="btn-sq btn-right">
+                <a onclick="goTo('courses',-40);">COURSES</a>
+            </div>
+            <div class="btn-sq btn-right">
+                <a onclick="goTo('register',-80);">REGISTER</a>
+            </div>
+        </div>
+    </header>
 
-</div>
-</article>
-</section>
+    <section class="section3 row" id="courses">
+        <article class="col-md-9 col-sm-10 col-xs-12 centrado">
+            <h3 style="color: #000;">COURSES</h3>
 
-<section class="section6 sectionForm row" id="register">
-<article class="col-lg-9 col-md-8 col-sm-10 col-xs-12 centrado">
-<h3 class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="anclaForm" style="color: #fff;">REGISTRATION FORM</h3>
-<h4 class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="color: #000;">Fill this short form to register. We assures you that your information is safe with us.</h4>
-<form method="POST" action="" id="regForm" class="_form _form_14 _inline-form  _dark col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 formulario centrado" novalidate>
+            <p>All courses are job oriented to skill enhancement courses to help you get a new or better job!</p>
 
-<div class="_form-content">
-<div class="_form_element _x16824975 _full_width ">
-<div class="_field-wrapper">
-<div class="black" >*Full Name:</div><input class="col-lg-12 col-md-12 col-sm-12 col-xs-12 textInput" type="text" id="name" name="name" placeholder="" required style="margin-bottom:7px;"/>
-</div>
-</div>
-<div class="_form_element _x96716862 _full_width ">
-<div class="_field-wrapper">
-<div   class="black">*Email Address:</div><input class="col-lg-12 col-md-12 col-sm-12 col-xs-12 textInput" type="text" id="email" name="email" placeholder="" required style="margin-bottom:7px;"/>
-</div>
-</div>
+            <div class="sq-icons-container col-md-12" id="courseContainer">
 
-<div class="_form_element _x96716862 _full_width ">
-		<div class="_field-wrapper">
-			<div class="black" >*Phone:</div><input class="col-lg-12 col-md-12 col-sm-12 col-xs-12 textInput" type="text" id="phone" name="phone" placeholder="" required style="margin-bottom:7px;"/>
-		</div>
-</div>
-<div class="_form_element _x80655353 _full_width ">
-<div class="_field-wrapper">
-<label for="dob">Select your Date Of Birth</label>
-<div   class="black">*Date of Birth: </div></div><input class="col-lg-12 col-md-12 col-sm-12 col-xs-12 textInput" type="date" id="dob" name="dob" placeholder="" required style="margin-bottom:7px;"/>
-</div>
-</div>
-<div class="_form_element _x96716862 _full_width ">
-<div class="_field-wrapper">
-<div class="black"  >*Select Course:</div><select class="col-lg-12 col-md-12 col-sm-12 col-xs-12 textInput" type="text" id="course" name="course" required style="margin-bottom:7px;">
-	<option value="BootCamp" selected>BootCamp</option>
-		<option value="Automation Developer">Automation Developer</option>
-		<option value="Performance Engineering">Performance Engineering</option>
-		<option value="Cloud and Devops">Cloud and Devops</option>
-		<option value="Data Structure and Algorithms">Data Structure and Algorithms</option>
-</select>
-</div>
-</div>
+            </div>
+        </article>
+    </section>
+
+    <section class="section8 row" style="display: none;" id="bootCampCourseDetail">
+        <article class="col-md-12 col-sm-12 col-xs-12 centrado">
+            <h4 id="courseName">COURSES DETAIL</h4>
+            <h5>8 hours free bootcamp to get started with coding, you will be able to write and test your code in Java.</h5>
+            <h5>June 10 - June 18 (1pm - 3pm)</h5>
+            <br>
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <h6>Day 1 - June 10th
+                    <br>Why learn to Code
+                    <br>Fundamentals of coding/programming
+                    <br>Development env Setup using Eclipse
+                    <br>Write your first program
+                    <br>Test your code<br>
+                </h6>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <h6>Day 2 - June 11th
+                    <br>Java and Object Orientation
+                    <br>Write Object Oriented Code using Java
+                    <br>Conditions in Java
+                    <br>Loops in Java
+                    <br>Sample Project
+                    <br>Intro to Junit and Automation<br>
+                </h6>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <h6>Day 3 - June 17th
+                    <br>Junit Testing
+                    <br>TestNG
+                    <br>Maven and buld automation
+                    <br>Code Management
+                    <br>Intro to Data Structure
+                    <br>Why Data Structure<br>
+                </h6>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12">
+                <h6>Day 4 - June 18th
+                    <br>Code using Data Structure
+                    <br>Sorting and types
+                    <br>ArrayList and LinkedList
+                    <br>Collections in Java
+                    <br>AWS and Cloud
+                    <br>Coding and Test Automation Exercise<br>
+                </h6>
+            </div>
+
+        </article>
+    </section>
+
+    <section class="section8 row" style="display: none;" id="QACourseDetail">
+        <article class="col-md-12 col-sm-12 col-xs-12 centrado">
+            <h4>COURSES DETAIL</h4>
+            <h5>Coming Soon..</h5>
+        </article>
+    </section>
+
+    <section class="section8 row" style="display: none;" id="devCourseDetail">
+        <article class="col-md-12 col-sm-12 col-xs-12 centrado">
+            <h4>COURSES DETAIL</h4>
+            <h5>Coming Soon..</h5>
+        </article>
+    </section>
+
+    <section class="section8 row" style="display: none;" id="cloudCourseDetail">
+        <article class="col-md-12 col-sm-12 col-xs-12 centrado">
+            <h4>COURSES DETAIL</h4>
+            <h5>Coming Soon..</h5>
+        </article>
+    </section>
+
+    <section class="section8 row" style="display: none;" id="datastructureCourseDetail">
+        <article class="col-md-12 col-sm-12 col-xs-12 centrado">
+            <h4>COURSES DETAIL</h4>
+            <h5>Coming Soon..</h5>
+        </article>
+    </section>
+
+    <section class="section6 sectionForm row" id="register">
+        <article class="col-lg-9 col-md-8 col-sm-10 col-xs-12 centrado">
+            <h3 class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="anclaForm" style="color: #fff;">REGISTRATION
+                FORM</h3>
+            <h4 class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="color: #fff;">Fill this short form to
+                register.</h4>
+
+            <form method="POST" action="" id="regForm"
+                  class="_form _form_14 _inline-form  _dark col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 formulario centrado"
+                  novalidate>
+
+                <div class="_form-content">
+                    <div class="_form_element _x16824975 _full_width ">
+                        <div class="_field-wrapper">
+                            <div class="black">*Full Name:</div>
+                            <input class="col-lg-12 col-md-12 col-sm-12 col-xs-12 textInput" type="text" id="name"
+                                   name="name" placeholder="" required="true" style="margin-bottom:7px;"/>
+                        </div>
+                    </div>
+                    <div class="_form_element _x96716862 _full_width ">
+                        <div class="_field-wrapper">
+                            <div class="black">*Email Address:</div>
+                            <input class="col-lg-12 col-md-12 col-sm-12 col-xs-12 textInput" type="text" id="email"
+                                   name="email" placeholder="" required style="margin-bottom:7px;"/>
+                        </div>
+                    </div>
+
+                    <div class="_form_element _x96716862 _full_width ">
+                        <div class="_field-wrapper">
+                            <div class="black">*Phone:</div>
+                            <input class="col-lg-12 col-md-12 col-sm-12 col-xs-12 textInput" type="text" id="phone"
+                                   name="phone" placeholder="" required style="margin-bottom:7px;"/>
+                        </div>
+                    </div>
+                    <div class="_form_element _x80655353 _full_width ">
+                        <div class="_field-wrapper">
+                            <label for="dob">Select your Date Of Birth</label>
+
+                            <div class="black">*Date of Birth:</div>
+                        </div>
+                        <input class="col-lg-12 col-md-12 col-sm-12 col-xs-12 textInput" type="date" id="dob" name="dob"
+                               placeholder="" required style="margin-bottom:7px;"/>
+                    </div>
+                </div>
+                <div class="_form_element _x96716862 _full_width ">
+                    <div class="_field-wrapper">
+                        <div class="black">*Select Course:</div>
+                        <select class="col-lg-12 col-md-12 col-sm-12 col-xs-12 textInput" type="text" id="course"
+                                name="course" required style="margin-bottom:7px;">
+                            <option value="BootCamp" selected>FREE CODING BOOTCAMP</option>
+                            <option value="Automation Developer">QA AUTOMATION TRACK</option>
+                            <option value="Performance Engineering">SOFTWARE DEVELOPER TRACK</option>
+                            <option value="Cloud and Devops">CLOUD AND DEVOPS</option>
+                            <option value="Data Structure and Algorithms">DATA STRUCTURE ALGORITHMS</option>
+                        </select>
+                    </div>
+                </div>
 
 
-<div class="_form_element _field18 _full_width ">
-<div class="_field-wrapper">
-<div  class="black" >Message:</div><textarea class="col-lg-12 col-md-12 col-sm-12 col-xs-12 textAreaInput" id="message" name="message" placeholder="" required></textarea>
+                <div class="_form_element _field18 _full_width ">
+                    <div class="_field-wrapper">
+                        <div class="black">Message:</div>
+                        <textarea class="col-lg-12 col-md-12 col-sm-12 col-xs-12 textAreaInput" id="message"
+                                  name="message" placeholder="" required></textarea>
+                    </div>
+                </div>
+                <div class="_button-wrapper _full_width">
+                    <button id="_form_14_submit" class="_submit btn-sq centrado" type="button" onclick="doSubmit();">
+                        Submit
+                    </button>
+                </div>
+                <div class="_clear-element">
+                </div>
+                <div class="_form-thank-you" id="thank_you" style="display: none;">Thanks for contacting us. We will
+                    respond to you shortly!
+                </div>
+
+                <div class="_form_required_missing" id="required_missing" style="display: none;">Please Fill all Required Fields marked as * before Submit
+                </div>
+            </form>
+
+            <script type="text/javascript">
+
+
+                function goTo(divid, offset) {
+                    $("html, body").animate({scrollTop: $("#" + divid).offset().top - offset}, "slow");
+
+                }
+                function doSubmit() {
+
+                    var ary = $("#regForm").serializeArray();
+                    var obj = {};
+                    console.log('arrays from from is: ', ary);
+                    for (var a = 0; a < ary.length; a++) {
+                        var value = ary[a].value;
+                        obj[ary[a].name] = value;
+                    }
+                    if(obj.name =='' || obj.email =='' || obj.course == '' || obj.phone ==''){
+                        console.log('******undefined********');
+                        $("#thank_you").hide();
+                        $("#required_missing").show();
+                        return;
+                    }
+                    console.log('Sending post request');
+
+                    $.ajax({
+                        type: 'POST',
+                        url: 'http://ec2-13-58-159-217.us-east-2.compute.amazonaws.com:8080/register',
+                        data: JSON.stringify(obj),
+                        contentType: "application/json",
+                        success: function (data) {
+                            console.log("Data added!", data);
+                            $("#required_missing").hide();
+                            $("#thank_you").show();
+                        }
+                    });
+                }
+            </script>
+        </article>
+    </section>
+
+    <footer id="absFooter" class="row">
+        <div class="pag-footer">
+
+            <div class=" mywhite col-lg-3 col-md-3 col-sm-12  col-xs-12 ">
+                <h6><u>Contact us</u><br>10034 Foxboro Cir San Ramon CA 94583<br>Call 510-509-0576</h6>
+            </div>
+
+            <div class="div2 col-lg-9 col-md-9 col-sm-12 col-xs-12 text-center">
+
+                <div id="map"></div>
+
+                <script>
+                    function initMap() {
+                        var uluru = {lat: 37.754092, lng: -121.948332};
+                        var map = new google.maps.Map(document.getElementById('map'), {
+                            zoom: 12,
+                            center: uluru
+                        });
+                        var marker = new google.maps.Marker({
+                            position: uluru,
+                            map: map
+                        });
+                    }
+                </script>
+                <script async defer
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbB0uqZqmjsUjafJeCVm26tUGQqdnOerc&callback=initMap">
+                </script>
+            </div>
+        </div>
+    </footer>
 </div>
-</div>
-<div class="_button-wrapper _full_width">
-<button id="_form_14_submit" class="_submit btn-sq centrado" type="button" onclick="doSubmit();">
-Submit
-</button>
-</div>
-<div class="_clear-element">
-</div>
-	<div class="_form-thank-you" id="thank_you" style="display: none;">Thanks for contacting us. We will respond to you shortly!</div>
-</form>
 
 <script type="text/javascript">
 
+    loading();
+    function loading() {
 
 
-function goTo(divid,offset)
-	{	
-		$("html, body").animate({scrollTop:$("#"+divid).offset().top-offset },"slow");
-		
-	}
-function doSubmit(){
+        console.log($universal.courses[0].name);
+        $("#mainHeading").html("<h1>" + $universal.main_heading + "</h1>");
+        $("#subHeading").html("<h2>" + $universal.sub_heading + "</h2>");
+        $("#courseContainer").html("");
 
-	var ary = $("#regForm").serializeArray();
-	var obj = {};
-	for (var a = 0; a < ary.length; a++) obj[ary[a].name] = ary[a].value;
-	console.log('Sending post request');
+        var i = 0;
+        $data = "";
 
-	$.ajax({
-		type: 'POST',
-		url: 'http://ec2-13-58-159-217.us-east-2.compute.amazonaws.com:3000/register',
-		data: JSON.stringify(obj),
-		contentType: "application/json",
-		success: function(data) {
-			console.log("Data added!", data);
-            $("#thank_you").show();
-		}
-	});
-}
-	//alert("Collecting Data From Form...");
-	//alert($("#regForm").serialize());
-	//alert("We will send the request to the api");
+        for (i = 0; i < $universal.courses.length; i++) {
+            $data = "<div class='col-md-4 col-sm-6 col-xs-6 icon-container'>";
+            $data += "<a onclick=coursedetail('" + $universal.courses[i].link + "');>";
+            //$data += "<a onclick=goTo('" + $universal.courses[i].link + "',40);>";
+            $data += "<div class='icon " + $universal.courses[i].class1 + "'' >";
+            $data += "<div class='img-text'>";
+            $data += "<img src='" + $universal.courses[i].pic + "' alt='personnel icon'>";
+            $data += "<span>" + $universal.courses[i].name + "</span></div></div></a></div>";
+            $("#courseContainer").html($("#courseContainer").html() + $data);
+
+
+        }
+    }
+
+    function coursedetail(course){
+
+        var id;
+        var courseIndex;
+        for(i in $universal.courses){
+            id = '#' + $universal.courses[i].link;
+            console.log('id is : ' + id);
+            $(id).hide();
+            if($universal.courses[i].link == course) {
+                courseIndex=i;
+            }
+        }
+        id = '#' + course;
+        console.log('show id is : ' + id);
+        console.log($('#courseName').text());
+        $('#courseName').text($universal.courses[courseIndex].name);
+        $(id).show();
+        window.location.hash = id;
+    }
+    coursedetail('bootCampCourseDetail');
 
 </script>
-</article>
-</section>
-
-<footer id="absFooter" class="row">
-<div class="pag-footer">
-
-<div class="div2 col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-
-	<div id="map"></div>
-
-	<script>
-		function initMap() {
-			var uluru = {lat: 37.754092, lng: -121.948332};
-			var map = new google.maps.Map(document.getElementById('map'), {
-				zoom: 12,
-				center: uluru
-			});
-			var marker = new google.maps.Marker({
-				position: uluru,
-				map: map
-			});
-		}
-	</script>
-	<script async defer
-			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbB0uqZqmjsUjafJeCVm26tUGQqdnOerc&callback=initMap">
-	</script>
-	<!--
-        <h5>NEWSLETTER SUBSCRIBE</h5>
-    <div class="email-and-btn">
-    <form method="POST" action="" id="_form_40_" class="_form _form_40 _inline-form  _dark" novalidate>
-    <div class="_form-content">
-    <div class="_form_element _x36308906 _full_width ">
-    <div class="_field-wrapper">
-    <label for="txt-email-footer">Type your email</label>
-    <input type="text" id="txt-email-footer" name="email" placeholder="Type your email" required />
-    </div>
-    </div>
-    <div class="_button-wrapper _full_width">
-    <button id="_form_40_submit" class="_submit" type="button" onclick="alert('Thank you for the Subscription');">
-    Submit
-    </button>
-    </div>
-    <div class="_clear-element">
-    </div>
-    </div>
-    <div class="_form-thank-you" style="display:none;">
-    </div>
-    <div id="_error-form"></div>
-    </form>
-
-    </div>
-    </div>
-    <div class="col-lg-6 col-md-6 col-sm-6  col-xs-12 ">
-    <h5>FOLLOW US</h5>
-    <div class="socialBtns">
-    <a  target="_blank"><img class="linkLink socialLink" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAACXBIWXMAAAsSAAALEgHS3X78AAAAy0lEQVQ4y82TwQ2CMBSGvzJBN5BD7+IEwgauQDqBG8gGDAAzGEdwg3KGRN0AJqiXkjREMS0X/9P7X9qveS9/BU0vgYw4GavVKGh6A+wjIR2QJxsAuLtZsmhWwBRK8iE3q9UFqEMhgqa3nr8Dx0BGsRxnDTC5Ra6OU1mtBFDMLzh/drW0WmXOf4V8lNWqBqRoh9TztyCIaIccuAIP0Q5zKE0QBMi9+vRrJ9H6H4gfthfwBKT7Ex0wAimwW5zxe8UysTE6JEC5AVBarcwbF/c3cCymOdEAAAAASUVORK5CYII=" alt="linkedin logo"></a>
-    <a  target="_blank"><img class="linkFace socialLink" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAACXBIWXMAAAsSAAALEgHS3X78AAAAv0lEQVQ4y9WSwQ3CIBRAH03vdQN74G43sN3ADTTpBE6gKzgASbsJblDvHOoGOgFePolpTFroSRISPp88/n+gvPco40qgJG2MuQAGoEiEvDOpIBUAUGQxNwI3oAHOwDMk8ghI7Vs9yNoq4w7ANgZyDwBlXCcKqthKrAAq4DhNZpESN7825yC9iOwkHiRugMfSdkbfahsC3+rXV2u7pZBaGXcFrG+1lY95mh6ag+xlBrklcFkrlhSx/waRJ+xXMPoPPKAyZhKlJkIAAAAASUVORK5CYII=" alt="facebook logo"></a>
-    <a  target="_blank"><img class="linkTwitter socialLink" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAPCAYAAADphp8SAAAACXBIWXMAAAsSAAALEgHS3X78AAABBklEQVQ4y52T0W2DMBCGP6O8JxuEBw/ABmWDskGpvAidoOkAKGxQj8AI5N0PZILSCa4vB3JoSCm/ZFk+S9/9d7ozIsJamTqkQAogzrY3fyKCqcMBKMTZ5gGkAV6i0BU4AQVwSjSYA2dTh3IBUs0gAEfgHTgA+QjK9D6bOnh1GKt8UHEKNDt9dNHHM9CbOnjAA61mXVIpznajo15rHrXXUj6BL30vaQCIe3Rkm25AfiPkW5ztJpA42wOvG0CTgSQKtrM+rVHzC6Suun9APuLpjh0hzhbA2wpnF6CKA8mdXeKPubkAuTg7xMGdTrEHntaUA1RzyLS06ibTVcj07DX7oIm89vGufgDkd1eEKW5XOgAAAABJRU5ErkJggg==" alt="twitter logo"></a>
-    <a  target="_blank"><img class="linkG socialLink" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAQCAYAAAAMJL+VAAAACXBIWXMAAAsSAAALEgHS3X78AAABSUlEQVQ4y62UwXHCMBBFnzzccSqIDyrAVACpIHSAM2qAEuIOaEAz0EFSQZwO4K6D6QAq2FxWjEZjEpvJv3gs7/7v1f5dIyIMwfhQAVV8F2c7HoDJBYwPa2AHPA/EH4CtOHt5SMD4sAc2f+RcgVqc7ccIFBPJAT7Gkt8EjA+rjPwKvAFP4qwBFsAncBBnm7vX4UNjfOiMD7eYmT63GflKnD0mDT4C6xE/XAFLoMsFXpOgXUqu1d1DD1yAOhEAqGLezPhQZ0m5Hb9+EWg1Po/ZxCsvgDL7eOQfUWiZKVYT8ntxthNnjZqhjZXFs0Itd06S0oYTA5XgZWq1cQ72ydlSZyK3YKkTHnFOzZD0r037aEQkJvfAPCVIhEugyb634uz76FWhtvoaefcncbaetCp0Wy6yfgzhe4oRhrZpqVPb6ADNgZM2dD91bf8AAsaDyaF5zi4AAAAASUVORK5CYII=" alt="google+ logo"></a>
-    -->
-</div>
-</div>
-</div>
-</div>
-</footer>
-</div>
-<script type="text/javascript" src="https://secure.leadforensics.com/js/72862.js"></script>
-<noscript><img src="https://secure.leadforensics.com/72862.png" style="display:none;"/></noscript>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="resources/css/style_general.css">
-<link rel="stylesheet" href="resources/css/style_home.css">
-<link rel="stylesheet" href="style.css">
-<script src="resources/js/jquery-3.0.0.min.js"></script>
-<script src="resources/js/script_anchor.js"></script>
-<script src="resources/js/slick.js"></script>
-<script src="resources/js/script_hoverEffect.js"></script>
 <script type="text/javascript">
-	loading();
-	function loading(){
-		$universal = {
-			courses:[
-
-			    {
-			    	name:'PERFORMANCE',
-			    	description:'Demo Description',
-			    	pic:'resources/img/home-solutions-02.svg',
-			    	class1:'icon-container icon2',
-			    	link:'#'
-			    },
-			    {
-			    	name:'DEVELOPMENT & AUTOMATION',
-			    	description:'Demo Description',
-			    	pic:'resources/img/home-solutions-03.svg',
-			    	class1:'icon-container icon3',
-			    	link:'#'
-			    },
-			    {
-			    	name:'FREE BOOTCAMP',
-			    	description:'Demo Description',
-			    	pic:'resources/img/home-solutions-04.svg',
-			    	class1:'icon-container icon4',
-			    	link:'#'
-			    }
-			],
-			main_heading:"World has become digital economy, new jobs need skills to build digital world",
-			sub_heading:"Be part of change and shape your career to become Software Engineer, we make sure everyone can learn to code if you are ready"
-		};
-
-		console.log($universal.courses[0].name);
-		$("#mainHeading").html("<h1>"+$universal.main_heading+"</h1>");
-		$("#subHeading").html("<h2>"+$universal.sub_heading+"</h2>");
-		$("#courseContainer").html("");
-		
-		var i=0;
-		$data="";	
-		
-		for( i=0;i<$universal.courses.length;i++){
-		$data = "<div class='col-md-4 col-sm-6 col-xs-6 icon-container'>";
-		$data += "<a href='"+$universal.courses[i].link+"'>";
-		$data += "<div class='icon "+$universal.courses[i].class1+"'' >";
-		$data += "<div class='img-text'>";
-		$data += "<img src='"+$universal.courses[i].pic+"' alt='personnel icon'>";
-		$data += "<span>"+$universal.courses[i].name+"</span></div></div></a></div>";
-		$("#courseContainer").html($("#courseContainer").html()+$data);
-
-			
-		}
-		}
-
-</script>
-<script type="text/javascript">
-    window.smartlook||(function(d) {
-    var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
-    var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
-    c.charset='utf-8';c.src='https://rec.smartlook.com/recorder.js';h.appendChild(c);
+    window.smartlook || (function (d) {
+        var o = smartlook = function () {
+            o.api.push(arguments)
+        }, h = d.getElementsByTagName('head')[0];
+        var c = d.createElement('script');
+        o.api = new Array();
+        c.async = true;
+        c.type = 'text/javascript';
+        c.charset = 'utf-8';
+        c.src = 'https://rec.smartlook.com/recorder.js';
+        h.appendChild(c);
     })(document);
     smartlook('init', 'a19048bdfe3d5e59747a9df4a82dd83970e80641');
 </script>
