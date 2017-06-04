@@ -93,7 +93,7 @@
 <nav id="absNav">
     <div class="barra-nav">
         <div class="logo" id="logo">
-            <a href="">Logo Here</a>
+            <a href="resources/img/codePushup.png">Logo Here</a>
         </div>
     </div>
     <div class="navBar">
@@ -103,7 +103,7 @@
     <div class="mobile-nav">
 
         <div class="logo">
-            <a href="">Logo Here</a>
+            <a href="resources/img/codePushup.png">Logo Here</a>
         </div>
     </div>
 </div>
@@ -140,46 +140,56 @@
     <section class="section8 row" style="display: none;" id="bootCampCourseDetail">
         <article class="col-md-12 col-sm-12 col-xs-12 centrado">
             <h4 id="courseName">COURSES DETAIL</h4>
-            <h5>8 hours free bootcamp to get started with coding, you will be able to write and test your code in Java.</h5>
+            <h5>8 hours free bootcamp to get started with coding, you will be able to write and test your code in
+                Java.</h5>
             <h5>June 10 - June 18 (1pm - 3pm)</h5>
             <br>
+
             <div class="col-md-3 col-sm-3 col-xs-12">
                 <h6>Day 1 - June 10th
-                    <br>Why learn to Code
-                    <br>Fundamentals of coding/programming
-                    <br>Development env Setup using Eclipse
-                    <br>Write your first program
-                    <br>Test your code<br>
+                    <ul>
+                        <li>Why learn to Code</li>
+                        <li>Fundamentals of coding/programming</li>
+                        <li>Development env Setup using Eclipse</li>
+                        <li>Write your first program</li>
+                        <li>Test your code</li>
+                    </ul>
                 </h6>
             </div>
             <div class="col-md-3 col-sm-3 col-xs-12">
                 <h6>Day 2 - June 11th
-                    <br>Java and Object Orientation
-                    <br>Write Object Oriented Code using Java
-                    <br>Conditions in Java
-                    <br>Loops in Java
-                    <br>Sample Project
-                    <br>Intro to Junit and Automation<br>
+                    <ul>
+                        <li>Java and Object Orientation</li>
+                        <li>Write Object Oriented Code using Java</li>
+                        <li>Conditions in Java</li>
+                        <li>Loops in Java</li>
+                        <li>Sample Project</li>
+                        <li>Intro to Junit and Automation</li>
+                    </ul>
                 </h6>
             </div>
             <div class="col-md-3 col-sm-3 col-xs-12">
                 <h6>Day 3 - June 17th
-                    <br>Junit Testing
-                    <br>TestNG
-                    <br>Maven and buld automation
-                    <br>Code Management
-                    <br>Intro to Data Structure
-                    <br>Why Data Structure<br>
+                    <ul>
+                        <li>Junit Testing</li>
+                        <li>TestNG</li>
+                        <li>Maven and buld automation</li>
+                        <li>Code Management</li>
+                        <li>Intro to Data Structure</li>
+                        <li>Why Data Structure</li>
+                    </ul>
                 </h6>
             </div>
             <div class="col-md-3 col-sm-3 col-xs-12">
                 <h6>Day 4 - June 18th
-                    <br>Code using Data Structure
-                    <br>Sorting and types
-                    <br>ArrayList and LinkedList
-                    <br>Collections in Java
-                    <br>AWS and Cloud
-                    <br>Coding and Test Automation Exercise<br>
+                    <ul>
+                        <li>Code using Data Structure</li>
+                        <li>Sorting and types</li>
+                        <li>ArrayList and LinkedList</li>
+                        <li>Collections in Java</li>
+                        <li>AWS and Cloud</li>
+                        <li>Coding and Test Automation Exercise</li>
+                    </ul>
                 </h6>
             </div>
 
@@ -291,7 +301,8 @@
                     respond to you shortly!
                 </div>
 
-                <div class="_form_required_missing" id="required_missing" style="display: none;">Please Fill all Required Fields marked as * before Submit
+                <div class="_form_required_missing" id="required_missing" style="display: none;">Please Fill all
+                    Required Fields marked as * before Submit
                 </div>
             </form>
 
@@ -311,7 +322,7 @@
                         var value = ary[a].value;
                         obj[ary[a].name] = value;
                     }
-                    if(obj.name =='' || obj.email =='' || obj.course == '' || obj.phone ==''){
+                    if (obj.name == '' || obj.email == '' || obj.course == '' || obj.phone == '') {
                         console.log('******undefined********');
                         $("#thank_you").hide();
                         $("#required_missing").show();
@@ -395,16 +406,16 @@
         }
     }
 
-    function coursedetail(course){
+    function coursedetail(course) {
 
         var id;
         var courseIndex;
-        for(i in $universal.courses){
+        for (i in $universal.courses) {
             id = '#' + $universal.courses[i].link;
             console.log('id is : ' + id);
             $(id).hide();
-            if($universal.courses[i].link == course) {
-                courseIndex=i;
+            if ($universal.courses[i].link == course) {
+                courseIndex = i;
             }
         }
         id = '#' + course;
