@@ -19,6 +19,11 @@
             font-size: 20px;
             align: center;
         }
+        .courseheading {
+            background-color:white;
+            text-align:center;
+            color:black
+        }
     </style>
     <meta charset="UTF-8">
     <title>codeToLearn</title>
@@ -113,7 +118,7 @@
         </div>
         <div class="headerSubTitle col-lg-9 col-md-9 col-sm-10 col-xs-12 centrado" id="subHeading">
         </div>
-        <div class="headerBtns col-lg-5 col-md-6 col-sm-8 col-xs-10 centrado">
+        <div class="headerBtns col-lg-5 col-md-5 col-sm-6 col-xs-6 centrado">
             <div class="btn-sq btn-right">
                 <a onclick="goTo('courses',-40);">COURSES</a>
             </div>
@@ -136,15 +141,15 @@
     </section>
 
     <section class="section8 row" style="display: none;" id="bootCampCourseDetail">
-        <article class="col-md-12 col-sm-12 col-xs-12 centrado">
+        <article class="col-lg-12 col-md-12 col-sm-12 col-xs-12 centrado">
             <h4 id="courseName">COURSES DETAIL</h4>
             <h5>8 hours free bootcamp to get started with coding, you will be able to write and test your code in
-                Java.</h5>
-            <h5>June 10 - June 18 (1pm - 3pm). Refer contact us for location of session</h5>
-            <br>
+                Java.
+           </h5>
 
-            <div class="col-md-3 col-sm-3 col-xs-12">
-                <h6>Day 1 - June 10th
+            <br>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <h6>Day 1 - June 10th (1-3pm)
                     <ul>
                         <li>Why learn to Code</li>
                         <li>Fundamentals of coding/programming</li>
@@ -154,8 +159,8 @@
                     </ul>
                 </h6>
             </div>
-            <div class="col-md-3 col-sm-3 col-xs-12">
-                <h6>Day 2 - June 11th
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <h6>Day 2 - June 11th (1-3pm)
                     <ul>
                         <li>Java and Object Orientation</li>
                         <li>Write Object Oriented Code using Java</li>
@@ -166,8 +171,8 @@
                     </ul>
                 </h6>
             </div>
-            <div class="col-md-3 col-sm-3 col-xs-12">
-                <h6>Day 3 - June 17th
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <h6>Day 3 - June 17th (1-3pm)
                     <ul>
                         <li>Junit Testing</li>
                         <li>TestNG</li>
@@ -178,8 +183,8 @@
                     </ul>
                 </h6>
             </div>
-            <div class="col-md-3 col-sm-3 col-xs-12">
-                <h6>Day 4 - June 18th
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <h6>Day 4 - June 18th (1-3pm)
                     <ul>
                         <li>Code using Data Structure</li>
                         <li>Sorting and types</li>
@@ -190,7 +195,15 @@
                     </ul>
                 </h6>
             </div>
-
+            <br>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <br>
+                <h6 style="background-color:white; text-align:center; color:black">Session location: 10034 Foxboro Cir San Ramon</h6>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <br>
+                <h6 style="background-color:white; text-align:center; color:black">Note: Please bring your Laptop and Notebook</h6>
+            </div>
         </article>
     </section>
 
@@ -295,8 +308,10 @@
                 </div>
                 <div class="_clear-element">
                 </div>
-                <div class="_form-thank-you" id="thank_you" style="display: none;">Thanks for contacting us. We will
-                    respond to you shortly!
+                <div class="_form-thank-you" id="thank_you" style="display: none;">Thanks for signup. you are now enrolled in the course. Please read course notes for location and schedule.
+                </div>
+
+                <div class="_form-thank-you" id="already_registered" style="display: none;">You are already registered for the course!
                 </div>
 
                 <div class="_form_required_missing" id="required_missing" style="display: none;">Please Fill all
@@ -335,8 +350,18 @@
                         contentType: "application/json",
                         success: function (data) {
                             console.log("Data added!", data);
-                            $("#required_missing").hide();
-                            $("#thank_you").show();
+                            if(data.status == 'success') {
+                                $("#required_missing").hide();
+                                $("#already_registered").hide();
+                                $("#thank_you").show();
+                            }
+                            else{
+
+                                $("#required_missing").hide();
+                                $("#thank_you").hide();
+                                $("#already_registered").show();
+
+                            }
                         }
                     });
                 }
@@ -391,12 +416,12 @@
         $data = "";
 
         for (i = 0; i < $universal.courses.length; i++) {
-            $data = "<div class='col-md-4 col-sm-6 col-xs-6 icon-container'>";
+            $data = "<div class='col-md-3 col-sm-4 col-xs-6 icon-container'>";
             $data += "<a onclick=coursedetail('" + $universal.courses[i].link + "');>";
             //$data += "<a onclick=goTo('" + $universal.courses[i].link + "',40);>";
             $data += "<div class='icon " + $universal.courses[i].class1 + "'' >";
             $data += "<div class='img-text'>";
-            $data += "<img src='" + $universal.courses[i].pic + "' alt='personnel icon'>";
+            //$data += "<img src='" + $universal.courses[i].pic + "' alt='personnel icon'>";
             $data += "<span>" + $universal.courses[i].name + "</span></div></div></a></div>";
             $("#courseContainer").html($("#courseContainer").html() + $data);
 
